@@ -150,7 +150,7 @@ const Sonik = () => {
             T_daily_sales_volumeCalc(target_sales, avgPrice)
 
             resultText = "손익분기점은 " + break_even + "\n 목표 순이익을 위한 목표 매출은 " + target_sales
-                + "만원 입니다.\n 목표 매출을 위한 일 판매 건수는" + target_volume + "개 입니다."
+                + "만원 입니다.\n 목표 매출을 위한 일 판매 건수는 " + target_volume + "개 입니다."
             setResultData(resultText)
 
             setIsfixCost(false)
