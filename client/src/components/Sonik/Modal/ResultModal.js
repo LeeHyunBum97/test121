@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import S_modalForm from './S_modalForm';
 import ReactApexChart from 'react-apexcharts'
-import { useEffect } from 'react';
-
+import s from "../../../css/Sonik.module.css"
 
 // Sonik으로 부터 받은 props로 모달창의 동작과 결과값을 출력한다
 
@@ -46,14 +45,7 @@ const ResultModal = (props) => {
   }
 
   function CloseClickEvent(){
-    setTotalSales(null)
-    setFixCost(null)
-    setVarCost(null)
-    setBreak_even(null)
-    setAvgPrice(null)
-    setNetProfit(null)
-    setTarget_sales(null)
-    setTarget_volume(null)
+    window.location.replace("/sonik")
     closeModal()
   }
 
@@ -116,7 +108,7 @@ const ResultModal = (props) => {
 
   return (
     <React.Fragment>
-      <button className='button2' onClick={OpenClickEvent}>계산</button>
+      <button className={s.button2} onClick={OpenClickEvent}>계산</button>
       {/* header 부분에 텍스트를 입력한다,  */}
 
       <S_modalForm open={modalOpen} close={CloseClickEvent} header="계산결과"> {/* S_Modal로 props에 modalOpen uesState와 closeModal함수 전달 */}
