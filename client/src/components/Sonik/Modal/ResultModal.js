@@ -116,9 +116,9 @@ const ResultModal = (props) => {
         {props.result}
         <div>
           {
-            (Boolean(totalSales & fixCost & varCost)) === true
+            (Boolean(totalSales && fixCost && varCost)) === true
               ? <ReactApexChart options={
-                (Boolean(netProfit & avgPrice)) === true
+                (Boolean(netProfit && avgPrice)) === true
                   ? options2
                   : options1
               } series={
@@ -133,7 +133,7 @@ const ResultModal = (props) => {
           ※ 수익선이 지출선 보다 아래로 위치한 경우 적자이며, 위로 위치한 경우 흑자입니다.<br />
           <div>
             {
-              (Boolean(totalSales & fixCost & varCost & netProfit)) === true
+              (Boolean(totalSales && fixCost && varCost && netProfit)) === true
                 ? <div>
                   ※ X축은 판매량, Y축은 금액으로 단위는 만원 입니다.<br />
                   ※ 수익선의 가운데 Y값은 현재 분기당 매출이며, 가장 끝 Y값은 목표 순이익을 위한 목표 매출금액입니다.<br />
